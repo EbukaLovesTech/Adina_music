@@ -1,0 +1,378 @@
+:root {
+    --white: #ffffff;
+    --black: black;
+    --sky: #0ea5e9;
+    --zinc: #18181b;
+    --neutral: #a3a3a3;
+    --gray_300: #d1d5db;
+}
+
+@font-face {
+    font-family: 'HeaderFont';
+    src: url('./fonts/PermanentMarker-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'TextFont';
+    src: url('./fonts/Nunito-VariableFont_wght.ttf');
+}
+
+body {
+    background: var(--white);
+    font-size: 1rem;
+    font-family: 'TextFont', 'Courier New', Courier, monospace;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h1,
+h2 {
+    font-family: 'HeaderFont', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p:not(.listen+p) {
+    color: var(--gray_300);
+}
+
+h1>span {
+    display: block;
+    padding: 0 0.8rem 0 2rem;
+}
+
+header {
+    padding: 1rem;
+}
+
+.header_container {
+    position: sticky;
+    top: 0;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    z-index: 1000;
+    background: var(--white);
+}
+
+.header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#links_section.hidden {
+    display: none;
+}
+
+
+.visible {
+    display: block;
+}
+
+.dark-and-white {
+    background: var(--black);
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.white_text {
+    color: var(--white);
+}
+
+button.white_menu_btn {
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+li {
+    list-style: none;
+}
+
+.main_nav a {
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+}
+
+.main_nav li {
+    margin-bottom: 2rem;
+}
+
+.main_nav+nav,
+.main_nav {
+    padding-top: 3rem;
+}
+
+#links_section ul {
+    padding: 0;
+}
+
+#links_section nav:last-child .links_lists {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.menu_btn {
+    background: transparent;
+    font-size: 1.6rem;
+    padding: 0.5rem;
+    border: 1px solid var(--black);
+}
+
+h2 {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.dark_bg {
+    background: var(--zinc);
+    color: var(--white);
+    padding: 4rem 0 5rem;
+}
+
+.music_section {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.listen {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    padding: 0.8rem 1rem;
+    background: var(--sky);
+    color: white;
+    font-size: 1.7rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.melody path {
+    fill: var(--white);
+}
+
+.music_section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+}
+
+.music_section ul li {
+    list-style: none;
+}
+
+.music_section a {
+    text-decoration: none;
+}
+
+.music_platform {
+    margin-top: 3rem;
+}
+
+.music_platform a {
+    display: inline-block;
+    border: 1px solid var(--black);
+    padding: 0.4rem 5rem;
+}
+
+.about_section,
+.video_section {
+    margin-bottom: 6rem;
+}
+
+
+.video_section div {
+    display: flex;
+    justify-content: center;
+}
+
+.about_content {
+    padding: 0 0.8rem;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.video_section p {
+    text-align: center;
+}
+
+form {
+    padding: 0 0.8rem;
+}
+
+form div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.submit_btn {
+    font-size: 1.4rem;
+    flex-grow: 0.1;
+    padding: 1rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--neutral);
+    color: var(--white);
+    /* for large screens */
+    /* padding:1.3rem 0 */
+}
+
+.subscribe_section>h2+div {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+input {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    background: transparent;
+    color: inherit;
+    flex-grow: 0.4;
+    border-bottom: 1px solid var(--neutral);
+}
+
+footer {
+    background: var(--zinc);
+    color: var(--white);
+    padding: 2rem 0;
+}
+
+footer p {
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+@media screen and (min-width:500px) {
+
+    h1>span,
+    .artist_image {
+        padding: 0 0 0 3rem;
+    }
+
+    footer p {
+        padding: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    h2 {
+        font-size: 3rem;
+    }
+
+    .listen {
+        padding: 1.1rem 2.5rem;
+    }
+
+    .hero_section {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        margin-bottom: 8rem;
+        align-items: center;
+    }
+
+    .music_section>div:first-child {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 5rem;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    .music_section ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .music_platform a {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .about_content {
+        padding: 0;
+    }
+
+    .menu_btn {
+        display: none;
+    }
+
+    #links_section.hidden {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        gap: 7rem;
+        align-items: center;
+    }
+
+    .header_container {
+        overflow-y: visible;
+        overscroll-behavior: none;
+    }
+
+    #links_section nav:first-child a {
+        color: var(--black);
+        padding: 0 0.7rem;
+    }
+
+    .page_link:after {
+        content: '';
+        display: block;
+        height: 3px;
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+    }
+
+    .page_link:hover::after {
+        background: var(--black);
+        opacity: 1;
+    }
+
+    #links_section nav:first-child ul {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    #links_section nav:first-child li,
+    #links_section ul {
+        margin: 0;
+    }
+
+    .main_nav+nav,
+    .main_nav {
+        padding: 0;
+    }
+
+    .main_nav a {
+        font-size: 1.5rem;
+    }
+}
