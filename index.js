@@ -12,7 +12,7 @@
         links_section.classList.remove('visible');
         menu_btn.textContent = 'Menu';
         headerContainer.classList.remove('dark-and-white');
-        logo.src = 'https://res.cloudinary.com/dvcx5l1vb/image/upload/q_auto/v1690036954/Black_logo_-_no_background_c8rda3.svg';
+        logo.src = './logo/adina_logo.svg';
         menu_btn.classList.remove('white_menu_btn');
     }
 
@@ -23,7 +23,7 @@
             menu_btn.textContent = 'Cancel';
             link_lists.forEach(item => item.classList.add('white_text'));
             headerContainer.classList.add('dark-and-white');
-            logo.src = 'https://res.cloudinary.com/dvcx5l1vb/image/upload/q_auto/v1690036954/White_logo_-_no_background_cyhy5w.svg';
+            logo.src = './logo/adina_logo_white.svg';
             menu_btn.classList.add('white_menu_btn');
         }
         else {
